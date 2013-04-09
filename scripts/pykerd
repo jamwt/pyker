@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+from eventful import Service, Application
+from pyker.be import PykerServer
+from optparse import OptionParser
+
+def setup_options():
+	usage = "usage: %prog [options]"
+	parser = OptionParser(usage)
+	parser.add_option('-i', '--interface', dest='iface', default='',
+					  help="Interface to listen on (default: all interfaces)")
+	parser.add_option('-p', '--port', dest='port', type="int",
+					  default=17777, help="Port to listen on (default: 12106)")
+	return parser
+
+def main():
+	parser = setup_options()
+	(options, args) = parser.parse_args()
+	app = Application()
+	app.add_service(Service(PykerServer, options.port, iface=options.iface))
+	app.run()
+
+if __name__ == '__main__':
+	main()

@@ -1,0 +1,22 @@
+HIGH PRI
+--------
+ [x] Don't allow game start if only one player is in
+ [x] Fe -- window too small.  warn, sleep
+ [?] Bust out -- causes problem
+ [x] Money Leakage if amount is not enough (minimum)
+ [x] Addstr on scrollwin
+ [?] Game end.. clean up server state (when all have exited?)
+ [x] Resolve tests
+ [x] raise less (small blind) -- immediate fold-ish
+ [x] More visual cues right side
+ [x] variable timing based on complexity
+ * Split pots screwed up (show/no show)
+ * Shortcuts
+ * /show
+
+LOW PRI
+-------
+ * raise to call amount like call
+ * Resize support
+ * Fall back to disconnected state on server disconnect
+ * More entry/exit corner cases
